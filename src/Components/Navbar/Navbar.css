@@ -1,0 +1,84 @@
+.header {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__logo {
+  cursor: pointer;
+}
+.navbar__logo img {
+  width: 130px;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar__list li {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.navbar__list li:before,
+.navbar__list li:after {
+  position: absolute;
+  transition: all 0.35s ease;
+}
+.navbar__list li:before {
+  bottom: 0;
+  display: block;
+  height: 2px;
+  width: 0%;
+  content: "";
+  background-color: var(--primary-red-color);
+}
+
+.navbar__list li.active::before {
+  opacity: 1;
+  width: 100%;
+}
+
+.navbar__list li:after {
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: #ffffff;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.navbar__list li:hover:before {
+  opacity: 1;
+  width: 100%;
+}
+.navbar__list li:hover:after {
+  max-width: 100%;
+}
+
+.navbar__language-icons-contaier {
+  cursor: pointer;
+}
+
+.navbar__language-icons-contaier i {
+  color: var(--primary-blue-color);
+  font-size: 20px;
+}

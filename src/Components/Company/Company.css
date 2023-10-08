@@ -1,0 +1,15 @@
+.about-company {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-company__paragraph {
+  font-size: 21px;
+  color: rgb(102, 102, 102);
+  font-weight: 300;
+  opacity: 1;
+  transform: none;
+  white-space: break-spaces;
+  line-height: 1.2;
+}
